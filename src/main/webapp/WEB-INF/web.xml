@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>servlet_practice</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 서블릿 클래스를 만들었다면, 서블릿 클래스를 등록해 주어야 한다. -->
+  <servlet>
+  	<servlet-name>now</servlet-name>						<!-- 서블릿을 참조할 때 사용할 이름  -->
+  	<servlet-class>example.NowServlet</servlet-class>		<!-- 서블릿으로 사용할 클래스의 완전한 이름 -->
+  </servlet>
+  
+  <!-- 서블릿이 어떤 URL을 처리할지에 대한 매핑 정보 등록. -->
+  <servlet-mapping>
+  	<servlet-name>now</servlet-name>						<!-- 매핑할 서블릿 이름  -->
+	<url-pattern>/now</url-pattern>							<!-- 매핑할 URL 패턴 -->
+  </servlet-mapping>
+</web-app>
